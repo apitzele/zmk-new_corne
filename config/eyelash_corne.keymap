@@ -57,10 +57,10 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&kp TAB    &kp Q  &kp W      &kp F     &kp P  &kp B                              &kp UP                &kp J        &kp L  &kp U      &kp Y    &kp SEMI  &kp BSPC
-&td0       &kp A  &kp R      &kp S     &kp T  &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M       &kp N  &kp E      &kp I    &kp O  &kp SQT
-&kp LCTRL  &kp Z  &kp X      &kp C     &kp D  &kp V       &kp SPACE              &kp DOWN              &kp K        &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                             &kp LGUI  &kp BSPC  &lt 3 SPACE                                              &lt 3 ENTER  &mo 2  &kp RALT
+&kp TAB    &kp Q        &kp W         &kp F       &kp P       &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &kp BSPC
+&td0       &mt LCTRL A  &mt LSHIFT R  &mt LGUI S  &mt LALT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt LALT N  &mt RGUI E &mt RSHIFT I &mt RCTRL O  &kp SQT
+&kp LCTRL  &kp Z        &kp X         &kp C       &kp D       &kp V        &kp SPACE            &kp DOWN              &kp K        &kp H       &kp COMMA  &kp DOT      &kp FSLH     &kp ESC
+                                      &kp LGUI    &kp BSPC    &lt 3 SPACE                                             &lt 3 ENTER  &mo 2       &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -90,7 +90,7 @@
         layer_3 {
             display-name = "FN/NAV";
             bindings = <
-&studio_unlock   &kp F1      &kp F2      &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
+&studio_unlock      &kp F1      &kp F2      &kp F3       &kp F4     &kp F5                         &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
 &trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
 &trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
                                 &trans      &trans      &trans                                                                   &trans       &trans     &trans
