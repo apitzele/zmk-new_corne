@@ -2,9 +2,9 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   COLEMAK:
   - $$mdi:alpha-w-box$$
-  - {t: '$$mdi:keyboard-esc$$', h: Q}
-  - '&td_w_ctrl_a'
-  - '&td_f_ctrl_f'
+  - {t: Q, h: '$$mdi:keyboard-esc$$'}
+  - {t: W, h: Ctl+A}
+  - {t: F, h: Ctl+F}
   - P
   - B
   - $$mdi:arrow-up-bold$$
@@ -30,8 +30,8 @@ layers:
   - {t: O, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&td_z_tab'
-  - '&td_x_ctrl_x'
+  - {t: Z, h: '$$mdi:keyboard-tab$$'}
+  - {t: X, h: Ctl+X}
   - {t: C, h: Ctl+C}
   - {t: D, h: Ctl+S}
   - {t: V, h: Ctl+V}
