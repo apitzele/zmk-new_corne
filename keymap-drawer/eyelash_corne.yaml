@@ -34,7 +34,7 @@ layers:
   - {t: X, h: Ctl+X}
   - {t: C, h: Ctl+C}
   - {t: D, h: Ctl+S}
-  - V
+  - {t: V, h: Ctl+V}
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - K
