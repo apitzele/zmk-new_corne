@@ -38,7 +38,7 @@ layers:
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - K
-  - '&td_h_ctrl_h'
+  - {t: H, h: Ctl+H}
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
