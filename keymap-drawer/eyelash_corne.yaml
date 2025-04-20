@@ -1,10 +1,10 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   COLEMAK:
-  - $$mdi:keyboard-tab$$
-  - Q
-  - W
-  - F
+  - $$mdi:alpha-w-box$$
+  - '&td_q_esc'
+  - '&td_w_ctrl_a'
+  - '&td_f_ctrl_f'
   - P
   - B
   - $$mdi:arrow-up-bold$$
@@ -30,15 +30,15 @@ layers:
   - {t: O, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Z
-  - X
-  - C
-  - D
-  - V
+  - '&td_z_tab'
+  - '&td_x_ctrl_x'
+  - '&td_c_ctrl_c'
+  - '&td_x_ctrl_x'
+  - '&td_v_ctrl_v'
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - K
-  - H
+  - '&td_h_ctrl_h'
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
