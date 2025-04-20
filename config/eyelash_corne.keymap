@@ -39,8 +39,8 @@
 
         td_q: hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "Shortcut behavior";
-            bindings = <&kp Q &kp ESC>;
+            label = "Q/Escape Hold Tap";
+            bindings = <&kp Q>, <&kp ESC>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
         };
