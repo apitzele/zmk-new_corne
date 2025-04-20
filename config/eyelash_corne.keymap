@@ -36,7 +36,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-            display-name = "Shortcut-Tap";
+            display-name = "Shortcut-Balanced";
         };
 
         sc_hold: shortcut_tap2 {
@@ -45,7 +45,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
-            display-name = "Shortcut-Tap";
+            display-name = "Shortcut-Hold";
         };
 
         sc_tap: shortcut_tap3 {
