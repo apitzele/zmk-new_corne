@@ -40,7 +40,7 @@
         sc: behavor_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "Shortcut behavior";
-            #binding-cells = <2>;
+            bindings = <&kp Q <&kp ESC>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
         };
