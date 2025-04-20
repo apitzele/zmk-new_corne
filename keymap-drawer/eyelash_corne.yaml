@@ -3,8 +3,8 @@ layers:
   COLEMAK:
   - $$mdi:alpha-w-box$$
   - {t: Q, h: '$$mdi:keyboard-esc$$'}
-  - {t: W, h: Ctl+A}
-  - {t: F, h: Ctl+F}
+  - W
+  - F
   - P
   - B
   - $$mdi:arrow-up-bold$$
@@ -31,14 +31,14 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: Z, h: '$$mdi:keyboard-tab$$'}
-  - {t: X, h: Ctl+X}
-  - {t: C, h: Ctl+C}
-  - {t: D, h: Ctl+S}
-  - {t: V, h: Ctl+V}
+  - X
+  - C
+  - D
+  - V
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - K
-  - {t: H, h: Ctl+H}
+  - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
