@@ -32,9 +32,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&td_z_tab'
   - '&td_x_ctrl_x'
-  - '&td_c_ctrl_c'
-  - '&td_x_ctrl_x'
-  - '&td_v_ctrl_v'
+  - {t: Ctl+C, h: C}
+  - {t: Ctl+X, h: X}
+  - {t: Ctl+V, h: V}
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
   - K
