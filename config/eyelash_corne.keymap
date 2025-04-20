@@ -44,7 +44,7 @@
             bindings = <&kp Q>, <&kp ESC>;
         };
 
-        td_z_tab: td_q_esc {
+        td_z_tab: td_z_tab {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Z/Tab Tap Dance";
             #binding-cells = <0>;
