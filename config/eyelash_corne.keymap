@@ -36,6 +36,69 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        td_q_esc: td_q_esc {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Q/Escape Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp ESC>;
+        };
+
+        td_z_tab: td_q_esc {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Z/Tab Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&kp TAB>;
+        };
+
+        td_x_ctrl_x: td_x_ctrl_x {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "X/Ctrl+X Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&kp LC(X)>;
+        };
+
+        td_c_ctrl_c: td_c_ctrl_c {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "C/Ctrl+C Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp LC(C)>;
+        };
+
+        td_d_ctrl_s: td_d_ctrl_s {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "D/Ctrl+S Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp LC(S)>;
+        };    
+
+        td_v_ctrl_v: td_v_ctrl_v {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "V/Ctrl+V Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp LC(V)>;
+        };
+
+        td_f_ctrl_f: td_f_ctrl_f {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "F/Ctrl+F Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp LC(F)>;
+        };
+
+        td_w_ctrl_a: td_w_ctrl_a {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "W/Ctrl+A Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp LC(A)>;
+        };
+
+        td_h_ctrl_h: td_h_ctrl_h {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "H/Ctrl+H Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp H>, <&kp LC(H)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -57,9 +120,9 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&kp TAB &kp Q        &kp W         &kp F       &kp P       &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
+&caps_word &td_q_esc    &td_w_ctrl_a &td_f_ctrl_f       &kp P       &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
 &none   &mt LCTRL A  &mt LSHIFT R  &mt LGUI S  &mt LALT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt LALT N  &mt RGUI E &mt RSHIFT I &mt RCTRL O  &none
-&none   &kp Z        &kp X         &kp C       &kp D       &kp V        &kp SPACE            &kp DOWN              &kp K        &kp H       &kp COMMA  &kp DOT      &kp FSLH     &none
+&none   &td_z_tab    &td_x_ctrl_x   &td_c_ctrl_c &td_x_ctrl_x  &td_v_ctrl_v        &kp SPACE            &kp DOWN              &kp K        &td_h_ctrl_h      &kp COMMA  &kp DOT      &kp FSLH     &none
                                       &none    &lt 3 BSPC  &lt 1 SPACE                                             &lt 2 ENTER  &kp DEL     &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
