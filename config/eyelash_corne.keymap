@@ -77,10 +77,10 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&caps_word  &ht ESC Q    &ht LC(A) W   &ht LC(F) F &kp P       &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
-&none       &mt LCTRL A  &mt LSHIFT R  &mt LGUI S  &mt LALT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt LALT N  &mt RGUI E &mt RSHIFT I &mt RCTRL O  &none
-&none       &ht TAB Z    &ht LC(X) X   &ht LC(C) C &ht LC(S) D  &kp V        &kp SPACE            &kp DOWN              &kp K       &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
-                                      &none    &lt 3 BSPC  &lt 1 SPACE                                             &lt 2 ENTER  &kp DEL     &none
+&caps_word  &ht ESC Q    &ht LC(A) W   &ht LC(F) F &kp P        &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
+&none       &mt LCTRL A  &mt LSHIFT R  &mt LGUI S  &mt LALT T   &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt LALT N  &mt RGUI E &mt RSHIFT I &mt RCTRL O  &none
+&none       &ht TAB Z    &ht LC(X) X   &ht_hold LC(C) C &ht LC(S) D  &ht_tap LC(V) V        &kp SPACE            &kp DOWN              &kp K        &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
+                                       &none       &lt 3 BSPC   &lt 1 SPACE                                             &lt 2 ENTER  &kp DEL     &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
