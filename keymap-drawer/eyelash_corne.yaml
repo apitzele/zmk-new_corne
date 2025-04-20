@@ -2,7 +2,7 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   COLEMAK:
   - $$mdi:alpha-w-box$$
-  - '&td_q'
+  - {t: '$$mdi:keyboard-esc$$', h: Q}
   - '&td_w_ctrl_a'
   - '&td_f_ctrl_f'
   - P
