@@ -37,12 +37,31 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
-        td_q: hold_tap {
+        sc: shortcut_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "Q/Escape Hold Tap";
-            bindings = <&kp Q>, <&kp ESC>;
+            #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shortcut-Tap";
+        };
+
+        sc_hold: shortcut_tap2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
             flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shortcut-Tap";
+        };
+
+        sc_tap: shortcut_tap3 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Shortcut-Tap";
         };
 
         td_q_esc: td_q_esc {
@@ -130,7 +149,7 @@
             bindings = <
 &caps_word &td_q    &td_w_ctrl_a &td_f_ctrl_f       &kp P       &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
 &none   &mt LCTRL A  &mt LSHIFT R  &mt LGUI S  &mt LALT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt LALT N  &mt RGUI E &mt RSHIFT I &mt RCTRL O  &none
-&none   &td_z_tab    &td_x_ctrl_x   &td_c_ctrl_c &td_x_ctrl_x  &td_v_ctrl_v        &kp SPACE            &kp DOWN              &kp K        &td_h_ctrl_h      &kp COMMA  &kp DOT      &kp FSLH     &none
+&none   &td_z_tab    &td_x_ctrl_x   &sc &kc C &kc LC(C)  &sc_hold &kc X &kc LC(X)  &sc_tap &kc V &kc LC(V)        &kp SPACE            &kp DOWN              &kp K        &td_h_ctrl_h      &kp COMMA  &kp DOT      &kp FSLH     &none
                                       &none    &lt 3 BSPC  &lt 1 SPACE                                             &lt 2 ENTER  &kp DEL     &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
