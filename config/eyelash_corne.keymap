@@ -37,6 +37,14 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        sc: behavor_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Shortcut behavior";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+        };
+
         td_q_esc: td_q_esc {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Q/Escape Tap Dance";
@@ -120,9 +128,9 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&caps_word &td_q_esc    &td_w_ctrl_a &td_f_ctrl_f       &kp P       &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
+&caps_word &sc &kp Q &kp ESC &td_w_ctrl_a &td_f_ctrl_f       &kp P       &kp B                             &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
 &none   &mt LCTRL A  &mt LSHIFT R  &mt LGUI S  &mt LALT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt LALT N  &mt RGUI E &mt RSHIFT I &mt RCTRL O  &none
-&none   &td_z_tab    &td_x_ctrl_x   &td_c_ctrl_c &td_x_ctrl_x  &td_v_ctrl_v        &kp SPACE            &kp DOWN              &kp K        &td_h_ctrl_h      &kp COMMA  &kp DOT      &kp FSLH     &none
+&none   &td_z_tab    &td_x_ctrl_x  &sc &kp C &kp LC(C) &td_x_ctrl_x  &sc &kp V &kp LC(V)        &kp SPACE            &kp DOWN              &kp K        &td_h_ctrl_h      &kp COMMA  &kp DOT      &kp FSLH     &none
                                       &none    &lt 3 BSPC  &lt 1 SPACE                                             &lt 2 ENTER  &kp DEL     &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
