@@ -70,7 +70,7 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         tap-ms = <100>;
     };
-bgbgwq
+
     keymap {
         compatible = "zmk,keymap";
 
