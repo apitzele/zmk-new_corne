@@ -14,7 +14,7 @@ layers:
   - Y
   - {t: ;, s: ':'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:alpha-w-box$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: R, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: LGUI}
