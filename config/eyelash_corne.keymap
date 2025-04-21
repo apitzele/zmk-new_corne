@@ -27,7 +27,6 @@
     trigger-period-ms = <16>;
 };
 
-
 / {
     behaviors {
         ht: hold_tap {
@@ -42,6 +41,7 @@
 
     rgb_layer_effect: rgb_layer_effect {
         compatible = "zmk,rgb-effect";
+        #sensor-binding-cells = <0>; 
         key-positions = <4 9 11>; // Key positions for A, F, and E
         colors = <0x0000FF>;     // Blue color in hex (RRGGBB)
     };
