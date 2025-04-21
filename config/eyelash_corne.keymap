@@ -37,11 +37,6 @@
             bindings = <&kp>, <&kp>;
             display-name = "Shortcut-Balanced";
         };
-
-        rgb_green_layer: rgb_layer {
-            compatible = "zmk,behavior-rgb-underglow";
-            #binding-cells = <2>;
-        };
     };
 
     scroll_encoder: scroll_encoder {
@@ -63,7 +58,6 @@
                                   &none       &lt 3 BSPC   &lt 1 SPACE                                              &lt 2 ENTER  &kp DEL     &none
             >;
             sensor-bindings = <&scroll_encoder>;
-            layer-activate-behaviors = <&rgb_green_layer RGB_COLOR_HSB(128, 100, 100)>;
         };
 
         lower_layer {
@@ -75,7 +69,6 @@
                                         &none      &none      &none                                                                          &kp N0  &kp PERIOD &none
             >;
             sensor-bindings = <&scroll_encoder>;
-            layer-activate-behaviors = <&rgb_green_layer RGB_COLOR_HSB(128, 100, 100)>;
         };
 
         raise_layer {
