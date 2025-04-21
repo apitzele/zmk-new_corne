@@ -56,9 +56,6 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         tap-ms = <100>;
-    };
-
-    layer: layer {
         colors = <0x0000FF 0xFFFF00>; // Blue for layer 0, Yellow for layer 1
     };
 
@@ -73,7 +70,7 @@
 &none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C &ht LC(S) D  &ht LC(V) V   &kp SPACE            &kp DOWN              &kp K        &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
                                   &none       &lt 3 BSPC   &lt 1 SPACE                                              &lt 2 ENTER  &kp DEL     &none
             >;
-            sensor-bindings = <&layer>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
@@ -84,7 +81,7 @@
 &none  &kp LC(Z)        &kp LC(Y)       &none      &none      &none &kp C_MUTE                   &mmv MOVE_DOWN                  &none   &kp N1     &kp N2  &kp N3  &none  &none
                                         &none      &none      &none                                                                          &kp N0  &kp PERIOD &none
             >;
-            sensor-bindings = <&layer>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         raise_layer {
@@ -95,7 +92,7 @@
 &none          &rgb_ug RGB_TOG &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none           &none   &mkp MB5                  &mmv MOVE_DOWN                  &kp F5   &kp F10   &kp F11   &kp F12   &kp LC(F12) &none
                                                 &none            &none           &none                                                                       &none    &none  &none
             >;
-            sensor-bindings = <&layer>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
