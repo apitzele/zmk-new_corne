@@ -41,7 +41,6 @@
         rgb_green_layer: rgb_layer {
             compatible = "zmk,behavior-rgb-underglow";
             #binding-cells = <2>;
-            rgb_color = <RGB_COLOR_HSB(128, 100, 100)>;
         };
     };
 
