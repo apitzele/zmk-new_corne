@@ -58,6 +58,10 @@
         tap-ms = <100>;
     };
 
+    layer: layer {
+        colors = <0x0000FF 0xFFFF00>; // Blue for layer 0, Yellow for layer 1
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
