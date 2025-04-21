@@ -40,6 +40,12 @@
         };
     };
 
+    rgb_layer_effect: rgb_layer_effect {
+        compatible = "zmk,rgb-effect";
+        key-positions = <4 9 11>; // Key positions for A, F, and E
+        colors = <0x0000FF>;     // Blue color in hex (RRGGBB)
+    };
+
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
@@ -70,7 +76,7 @@
 &none       &ht TAB Z    &ht LC(X) X   &ht LC(C) C &ht LC(S) D  &ht LC(V) V   &kp SPACE            &kp DOWN              &kp K        &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
                                        &none       &lt 3 BSPC   &lt 1 SPACE                                              &lt 2 ENTER  &kp DEL     &none
             >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&rgb_layer_effect>;
         };
 
         lower_layer {
