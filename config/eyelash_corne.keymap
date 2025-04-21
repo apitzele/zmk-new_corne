@@ -41,9 +41,9 @@
 
     rgb_layer_effect: rgb_layer_effect {
         compatible = "zmk,rgb-effect";
-        #sensor-binding-cells = <0>; 
-        key-positions = <4 9 11>; // Key positions for A, F, and E
-        colors = <0x0000FF>;     // Blue color in hex (RRGGBB)
+        #sensor-binding-cells = <0>;
+        key-positions = <4 9 10 20 21 15>; // Replace with actual positions for A, F, G, Z, X, H
+        colors = <0x0000FF 0x0000FF 0x0000FF 0xFFFF00 0xFFFF00 0xFFFF00>; // Blue and Yellow
     };
 
     rgb_encoder: rgb_encoder {
