@@ -86,7 +86,7 @@
             display-name = "SYMBOL";
             bindings = <
 &none  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                               &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &none
-&none  &bt BT_CLR    &mkp LCLK     &mkp MCLK     &mkp RCLK     &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PIPE   &kp LBRC  &kp RBRC   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none
+&none  &kp EQUAL    &kp PLUS     &kp MINUS     &kp UNDER     &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PIPE   &kp LBRC  &kp RBRC   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none
 &none  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &mkp MB5                  &mmv MOVE_DOWN                   &kp TILDE  &kp LBKT  &kp RBKT   &kp GRAVE  &kp BSLH  &none
                                     &none        &none         &kp SPACE                                                                &none      &none     &none
             >;
