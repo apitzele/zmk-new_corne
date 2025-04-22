@@ -58,12 +58,6 @@
         tap-ms = <100>;
     };
 
-    layer_colors: layer_colors {
-        compatible = "zmk,rgb-effect";
-        #sensor-binding-cells = <0>;
-        colors = <0x0000FF 0xFFFF00 0xFF00FF 0x00FFFF>; // Colors for layers 0, 1, 2, 3
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -75,7 +69,7 @@
 &none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C &ht LC(S) D  &ht LC(V) V   &kp C_MUTE           &kp DOWN              &kp K        &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
                                   &none       &lt 3 BSPC   &lt 1 SPACE                                              &lt 2 ENTER  &kp DEL     &none
             >;
-            sensor-bindings = <&layer_colors>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
