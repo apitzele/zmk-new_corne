@@ -60,7 +60,7 @@
 
     layer_state {
         bindings = <
-            &rgb_ug RGB_COLOR_HSB 120 255 255 
+            &rgb_ug RGB_COLOR_HSB 120 255 255
             &rgb_ug RGB_COLOR_HSB 160 255 255
             &rgb_ug RGB_COLOR_HSB 320 255 255
             &rgb_ug RGB_COLOR_HSB 200 255 255
