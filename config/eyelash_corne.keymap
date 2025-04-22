@@ -60,6 +60,7 @@
 
     layer_colors: layer_colors {
         compatible = "zmk,rgb-effect";
+        #sensor-binding-cells = <0>;
         colors = <0x0000FF 0xFFFF00 0xFF00FF 0x00FFFF>; // Colors for layers 0, 1, 2, 3
     };
 
