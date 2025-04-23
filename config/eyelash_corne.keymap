@@ -37,6 +37,17 @@
             bindings = <&kp>, <&kp>; 
             display-name = "Shortcut-Balanced";
         };
+
+        layer_rgb: layer_rgb {
+            compatible = "zmk,behavior-custom";
+            #binding-cells = <1>;
+            bindings = <
+                &rgb_ug RGB_COLOR_HSB(120, 255, 255) // Default layer (blue)
+                &rgb_ug RGB_COLOR_HSB(160, 255, 255) // Lower layer (yellow)
+                &rgb_ug RGB_COLOR_HSB(320, 255, 255) // Raise layer (magenta)
+                &rgb_ug RGB_COLOR_HSB(200, 255, 255) // Symbol layer (cyan)
+            >;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -60,10 +71,10 @@
 
     layer_state {
         bindings = <
-            &rgb_ug RGB_COLOR_HSB(120, 255, 255)
-            &rgb_ug RGB_COLOR_HSB(160, 255, 255)
-            &rgb_ug RGB_COLOR_HSB(320, 255, 255)
-            &rgb_ug RGB_COLOR_HSB(200, 255, 255)
+            &layer_rgb 0 // Default layer
+            &layer_rgb 1 // Lower layer
+            &layer_rgb 2 // Raise layer
+            &layer_rgb 3 // Symbol layer
         >;
     };
 
