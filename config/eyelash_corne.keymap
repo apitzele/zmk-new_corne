@@ -38,15 +38,10 @@
             display-name = "Shortcut-Balanced";
         };
 
-        layer_rgb: layer_rgb {
+        lt_rgb: lt_rgb {
             compatible = "zmk,behavior-custom";
-            #binding-cells = <1>;
-            bindings = <
-                &rgb_ug RGB_COLOR_HSB(120, 255, 255) // Default layer (blue)
-                &rgb_ug RGB_COLOR_HSB(160, 255, 255) // Lower layer (yellow)
-                &rgb_ug RGB_COLOR_HSB(320, 255, 255) // Raise layer (magenta)
-                &rgb_ug RGB_COLOR_HSB(200, 255, 255) // Symbol layer (cyan)
-            >;
+            #binding-cells = <0>;
+            bindings = <&lt 2 ENTER>, <&rgb_ug RGB_COLOR_HSB(120, 255, 255)>;
         };
     };
 
@@ -69,15 +64,6 @@
         tap-ms = <100>;
     };
 
-    layer_state {
-        bindings = <
-            &layer_rgb 0 // Default layer
-            &layer_rgb 1 // Lower layer
-            &layer_rgb 2 // Raise layer
-            &layer_rgb 3 // Symbol layer
-        >;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -87,7 +73,7 @@
 &none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F &kp P        &kp B                              &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
 &none  &mt LCTRL A  &mt LSHIFT R  &mt LGUI S  &mt LALT T   &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &mt LALT N  &mt RGUI E &mt RSHIFT I &mt RCTRL O  &none
 &none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C &ht LC(S) D  &ht LC(V) V   &kp C_MUTE           &kp DOWN              &kp K        &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
-                                  &none       &lt 3 BSPC &rgb_ug RGB_COLOR_HSB(100, 255, 255)  &lt 1 SPACE &rgb_ug RGB_COLOR_HSB(160, 255, 255)                                             &lt 2 ENTER &rgb_ug RGB_COLOR_HSB(200, 255, 255) &kp DEL     &none
+                                  &none       &lt 3 BSPC   &lt 1 SPACE                                              &lt_rgb      &kp DEL     &none
             >;
             sensor-bindings = <&scroll_encoder>;
         };
