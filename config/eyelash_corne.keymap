@@ -38,12 +38,12 @@
                 <&macro_press>,
                 <&lt 1 SPACE>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(128,100,100)>,
+                <&rgb_ug RGB_COLOR_HSB(129,73,55)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 1 SPACE>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(300,100,50)>;
+                <&rgb_ug RGB_COLOR_HSB(240,80,80)>;
         };
     };
 
