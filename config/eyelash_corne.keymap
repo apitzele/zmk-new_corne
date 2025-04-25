@@ -38,13 +38,13 @@
             display-name = "Shortcut-Balanced";
         };
 
-        brightness_encoder: rgb_encoder {
+        brightness_encoder: rgb_brightness_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
-        sat_encoder: rgb_hue_encoder {
+        sat_encoder: rgb_sat_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
