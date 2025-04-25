@@ -41,7 +41,7 @@
 
     rgb: rgb_encode {
         compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
+        #sensor-binding-cells = <2>;
         bindings = <&rgb_ug>, <&rgb_ug>;
     };
 
