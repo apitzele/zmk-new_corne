@@ -37,13 +37,15 @@
             bindings = <&kp>, <&kp>; 
             display-name = "Shortcut-Balanced";
         };
+
+        rgb: rgb_encode {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&rgb_ug>, <&rgb_ug>;
+        };
     };
 
-    rgb: rgb_encode {
-        compatible = "zmk,behavior-sensor-rotate-var";
-        #sensor-binding-cells = <2>;
-        bindings = <&rgb_ug>, <&rgb_ug>;
-    };
+
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
