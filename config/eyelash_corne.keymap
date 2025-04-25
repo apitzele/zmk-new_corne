@@ -17,7 +17,8 @@
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
+    time-to-max-speed-ms = <100>;     
+    // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -28,6 +29,19 @@
 };
 
 / {
+    macros {
+        ly_num: zed_em_kay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mo 1>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 1>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
+        };
+    };
+
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -35,7 +49,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>; 
-            display-name = "Shortcut-Balanced";
+            display-name = "Hold Tap";
         };
 
         brightness_encoder: rgb_brightness_encoder {
@@ -46,7 +60,7 @@
 
         sat_encoder: rgb_sat_encoder {
             compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
+            #sensor-binding-cells = 46266<0>;
             bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
         };
 
@@ -66,7 +80,7 @@
 &none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F &kp P        &kp B                              &kp UP                &kp J        &kp L       &kp U      &kp Y        &kp SEMI     &none
 &none  &ht LCTRL A  &ht LSHIFT R  &ht LGUI S  &ht LALT T   &kp G                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &ht LALT N  &ht RGUI E &ht RSHIFT I &ht RCTRL O  &none
 &none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C &ht LC(S) D  &ht LC(V) V   &kp C_MUTE           &kp DOWN              &kp K        &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
-                                  &none       &lt 3 BSPC   &lt 1 SPACE                                              &lt 2 ENTER  &kp DEL     &none
+                                  &none       &lt 3 BSPC   &ly_num                                                  &lt 2 ENTER  &kp DEL     &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
