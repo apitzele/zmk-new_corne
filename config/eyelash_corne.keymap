@@ -37,33 +37,24 @@
             bindings = <&kp>, <&kp>; 
             display-name = "Shortcut-Balanced";
         };
-
-        rgb: rgb_encode {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&rgb_ug>, <&rgb_ug>;
-        };
     };
 
-
-
-    rgb_encoder: rgb_encoder {
+    brightness_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
     };
 
-    rgb_hue_encoder: rgb_hue_encoder {
+    sat_encoder: rgb_hue_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
+    };
+
+    hue_encoder: rgb_hue_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-    };
-
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <100>;
     };
 
     keymap {
@@ -77,7 +68,7 @@
 &none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C &ht LC(S) D  &ht LC(V) V   &kp C_MUTE           &kp DOWN              &kp K        &ht LC(H) H &kp COMMA  &kp DOT      &kp FSLH     &none
                                   &none       &lt 3 BSPC   &lt 1 SPACE                                              &lt 2 ENTER  &kp DEL     &none
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
@@ -88,7 +79,7 @@
 &none  &kp LC(Z)    &kp LC(Y)       &none      &none      &none &kp C_MUTE                   &mmv MOVE_DOWN                  &none   &kp N1     &kp N2  &kp N3  &none  &none
                                     &none      &none      &none                                                              &kp N0  &kp PERIOD &none
             >;
-            sensor-bindings = <&rgb RGB_HUI RGB_HUD>;
+            sensor-bindings = <&hue_encoder>;
         };
 
         raise_layer {
@@ -99,7 +90,7 @@
 &none          &rgb_ug RGB_TOG &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none           &none   &rgb_ug RGB_TOG                   &mmv MOVE_DOWN                   &kp F5   &kp F10   &kp F11   &kp F12   &kp LC(F12) &none
                                                 &none            &none           &none                                                                      &none    &none     &none
             >;
-            sensor-bindings = <&rgb RGB_BRI RGB_BRD>;
+            sensor-bindings = <&brightness_encoder>;
         };
 
         layer_3 {
@@ -110,7 +101,7 @@
 &none  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL                  &mmv MOVE_DOWN                   &kp TILDE  &kp LBKT  &kp RBKT   &kp GRAVE  &kp BSLH  &none
                                    &none         &none         &bt BT_SEL 3                                                                   &none      &none     &none
             >;
-            sensor-bindings = <&rgb RGB_SPI RGB_SPD>;
+            sensor-bindings = <&sat_encoder>;
         };
     };
 };
