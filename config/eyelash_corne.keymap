@@ -31,19 +31,49 @@
 
 / {
     macros {
-        ly_num: zed_em_kay {
+        lay_num: lay_num {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&lt 1 SPACE>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(129,73,55)>,
+                <&rgb_ug RGB_COLOR_HSB(240,100,100)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 1 SPACE>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(240,80,80)>;
+                <&rgb_ug RGB_COLOR_HSB(240,75,90)>;
+        };
+
+        lay_nav: lay_nav {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&lt 2 ENTER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(120,100,100)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&lt 2 ENTER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(240,75,90)>;
+        };
+
+        lay_sym: lay_sym {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&lt 3 BSPC>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(185,100,100)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&lt 3 BSPC>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(240,75,90)>;
         };
     };
 
@@ -86,7 +116,7 @@
 &none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F  &kp P        &kp B                                &kp UP                &kp J        &kp L        &kp U       &kp Y         &kp SEMI     &none
 &none  &ht LCTRL A  &ht LSHIFT R  &ht LGUI S   &ht LALT T   &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &ht LALT N   &ht RGUI E  &ht RSHIFT I  &ht RCTRL O  &none
 &none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C  &ht LC(S) D  &ht LC(V) V  &kp C_MUTE              &kp DOWN              &kp K        &ht LC(H) H  &kp COMMA   &kp DOT       &kp FSLH     &none
-                                  &none        &lt 3 BSPC   &ly_num                                                    &lt 2 ENTER  &kp DEL      &none
+                                  &none        &lay_sym     &lay_num                                                   &lay_nav     &kp DEL      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -127,14 +157,6 @@
 
             sensor-bindings = <&sat_encoder>;
         };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
-        };
+        
     };
 };
