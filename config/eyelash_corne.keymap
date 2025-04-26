@@ -26,6 +26,16 @@
 };
 
 / {
+    autoshift_keys {
+        compatible = "zmk,autoshift-keys";
+        key-positions = <
+            0x36 // Comma (,)
+            0x37 // Period (.)
+            0x39 // Semicolon (;)
+            0x2F // Forward Slash (/)
+        >;
+    };
+
     macros {
         lay_num: lay_num {
             compatible = "zmk,behavior-macro";
@@ -111,11 +121,11 @@
 
         raise_layer {
             display-name = "FN/NAV";
-            bindings = <
-&bt BT_SEL 0  &none         &none          &none            &none    &none                          &none        &none   &kp HOME  &kp PG_UP  &kp PG_DN  &kp END      &none
-&bt BT_SEL 1  &kp LCTRL     &kp LSHIFT     &none            &none    &none                   &none  &none &none  &kp F8  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT    &none
-&bt BT_SEL 2  &out OUT_USB  &out OUT_BLE   &none            &none    &none   &bt BT_CLR_ALL         &none        &kp F5  &kp F10   &kp F11    &kp F12    &kp LC(F12)  &none
-                                           &studio_unlock   &none    &none                                       &none   &none     &none
+            bindings = < 
+&bt BT_SEL 0  &none         &none          &none            &none    &none                           &none        &none   &kp HOME  &kp PG_UP  &kp PG_DN  &kp END      &none
+&bt BT_SEL 1  &kp LCTRL     &kp LSHIFT     &none            &none    &none                    &none  &none &none  &kp F8  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT    &none
+&bt BT_SEL 2  &out OUT_USB  &out OUT_BLE   &none            &none    &none   &studio_unlock          &none        &kp F5  &kp F10   &kp F11    &kp F12    &kp LC(F12)  &none
+                                           &bt BT_CLR_ALL   &none    &none                                        &none   &none     &none
             >;
         };
 
