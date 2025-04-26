@@ -38,12 +38,12 @@
                 <&macro_press>,
                 <&lt 1 SPACE>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(250,100,100)>,
+                <&rgb_ug RGB_COLOR_HSB(240,90,90)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 1 SPACE>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(240,90,80)>;
+                <&rgb_ug RGB_COLOR_HSB(230,90,60)>;
         };
 
         lay_nav: lay_nav {
@@ -53,12 +53,12 @@
                 <&macro_press>,
                 <&lt 2 ENTER>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(120,100,100)>,
+                <&rgb_ug RGB_COLOR_HSB(45,100,75)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 2 ENTER>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(240,90,80)>;
+                <&rgb_ug RGB_COLOR_HSB(230,90,60)>;
         };
 
         lay_sym: lay_sym {
@@ -68,12 +68,12 @@
                 <&macro_press>,
                 <&lt 3 BSPC>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(185,100,100)>,
+                <&rgb_ug RGB_COLOR_HSB(195,100,80)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 3 BSPC>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(240,90,80)>;
+                <&rgb_ug RGB_COLOR_HSB(230,90,60)>;
         };
     };
 
