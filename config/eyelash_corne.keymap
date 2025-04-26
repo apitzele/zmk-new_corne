@@ -11,16 +11,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
-
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
+    acceleration-exponent = <1>;
     time-to-max-speed-ms = <100>;
-
-    // 300
-
-    delay-ms = <0>;                   // 0
+    delay-ms = <0>;
 };
 
 &mmv {
@@ -86,24 +82,6 @@
             bindings = <&kp>, <&kp>;
             display-name = "Hold Tap";
         };
-
-        brightness_encoder: rgb_brightness_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-        };
-
-        sat_encoder: rgb_sat_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
-        };
-
-        hue_encoder: rgb_hue_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-        };
     };
 
     keymap {
@@ -112,50 +90,43 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F  &kp P        &kp B                                &kp UP                &kp J        &kp L        &kp U       &kp Y         &kp SEMI     &none
-&none  &ht LCTRL A  &ht LSHIFT R  &ht LGUI S   &ht LALT T   &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &ht LALT N   &ht RGUI E  &ht RSHIFT I  &ht RCTRL O  &none
-&none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C  &ht LC(S) D  &ht LC(V) V  &kp C_MUTE              &kp DOWN              &kp K        &ht LC(H) H  &kp COMMA   &kp DOT       &kp FSLH     &none
-                                  &none        &lay_sym     &lay_num                                                   &lay_nav     &kp DEL      &none
+&none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F  &kp P        &kp B                            &none          &kp J        &kp L        &kp U       &kp Y         &kp SEMI     &none
+&none  &ht LCTRL A  &ht LSHIFT R  &ht LGUI S   &ht LALT T   &kp G                     &none  &none &none    &kp M        &ht LALT N   &ht RGUI E  &ht RSHIFT I  &ht RCTRL O  &none
+&none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C  &ht LC(S) D  &ht LC(V) V   &kp C_MUTE         &none          &kp K        &ht LC(H) H  &kp COMMA   &kp DOT       &kp FSLH     &none
+                                  &none        &lay_sym     &lay_num                                        &lay_nav     &kp DEL      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        lower_layer {
+        number_layer {
             display-name = "NUMBER";
             bindings = <
-&none  &bootloader  &sys_reset  &none      &none      &none                                &mmv MOVE_UP                     &none   &kp N7      &kp N8  &kp N9  &none  &none
-&none  &none        &mkp MCLK   &mkp RCLK  &mkp LCLK  &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none   &kp N4      &kp N5  &kp N6  &none  &none
-&none  &kp LC(Z)    &kp LC(Y)   &none      &none      &none  &kp C_MUTE                    &mmv MOVE_DOWN                   &none   &kp N1      &kp N2  &kp N3  &none  &none
-                                &none      &none      &none                                                                 &kp N0  &kp PERIOD  &none
+&none  &bootloader  &sys_reset  &none      &none      &none                           &mmv MOVE_UP                     &none   &kp N7      &kp N8  &kp N9  &none  &none
+&none  &none        &mkp MCLK   &mkp RCLK  &mkp LCLK  &none           &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT  &none   &kp N4      &kp N5  &kp N6  &none  &none
+&none  &kp LC(Z)    &kp LC(Y)   &none      &none      &none   &none                   &mmv MOVE_DOWN                   &none   &kp N1      &kp N2  &kp N3  &none  &none
+                                &none      &none      &none                                                            &kp N0  &kp PERIOD  &none
             >;
-
-            sensor-bindings = <&hue_encoder>;
         };
 
-        raise_layer {
+        navfn_layer {
             display-name = "FN/NAV";
             bindings = <
-&studio_unlock  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none                                     &mmv MOVE_UP                     &none   &kp HOME  &kp PG_UP  &kp PG_DN  &kp END      &none
-&none           &kp LCTRL        &kp LSHIFT       &none            &none            &none                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F8  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT    &none
-&none           &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none            &none  &rgb_ug RGB_TOG                    &mmv MOVE_DOWN                   &kp F5  &kp F10   &kp F11    &kp F12    &kp LC(F12)  &none
-                                                  &none            &none            &none                                                                      &none   &none     &none
+&bt BT_SEL 0  &none         &none          &none            &none    &none                  &none        &none   &kp HOME  &kp PG_UP  &kp PG_DN  &kp END      &none
+&bt BT_SEL 1  &kp LCTRL     &kp LSHIFT     &none            &none    &none           &none  &none &none  &kp F8  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT    &none
+&bt BT_SEL 2  &out OUT_USB  &out OUT_BLE   &none            &none    &none   &none          &none        &kp F5  &kp F10   &kp F11    &kp F12    &kp LC(F12)  &none
+                                           &studio_unlock   &none    &none                               &none   &none     &none
             >;
-
-            sensor-bindings = <&brightness_encoder>;
         };
 
-        layer_3 {
+        symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&none  &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                                       &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &none
-&none  &kp EQUAL     &kp PLUS      &kp MINUS     &kp UNDER     &none                           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PIPE   &kp LBRC  &kp RBRC   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none
-&none  &out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR_ALL                    &mmv MOVE_DOWN                   &kp TILDE  &kp LBKT  &kp RBKT   &kp GRAVE         &kp BSLH           &none
-                                   &none         &none         &bt BT_SEL 3                                                                     &none      &none     &none
+&none  &kp EXCL      &kp AT        &kp HASH   &kp DLLR    &kp PRCNT                      &none        &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &none
+&none  &kp EQUAL     &kp PLUS      &kp MINUS  &kp UNDER   &none                   &none  &none &none  &kp PIPE   &kp LBRC  &kp RBRC   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none
+&none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none  &bt BT_CLR_ALL          &none        &kp TILDE  &kp LBKT  &kp RBKT   &kp GRAVE         &kp BSLH           &none
+                                   &none      &none       &none                                       &none      &none     &none
             >;
-
-            sensor-bindings = <&sat_encoder>;
         };
-        
     };
 };
