@@ -35,6 +35,67 @@
             key-positions = <17 20>;
             bindings = <&kp TAB>;
         };
+
+        combo_14 {
+            timeout-ms = <50>;
+            key-positions = <1 14>;
+            bindings = <&kp Z>;
+        };
+
+        combo_15 {
+            timeout-ms = <50>;
+            key-positions = <1 15>;
+            bindings = <&kp X>;
+        };
+
+        combo_16 {
+            timeout-ms = <50>;
+            key-positions = <1 16>;
+            bindings = <&kp C>;
+        };
+
+        combo_17 {
+            timeout-ms = <50>;
+            key-positions = <1 17>;
+            bindings = <&kp D>;
+        };
+
+        combo_18 {
+            timeout-ms = <50>;
+            key-positions = <1 18>;
+            bindings = <&kp V>;
+        };
+
+        combo_19 {
+            timeout-ms = <50>;
+            key-positions = <1 19>;
+            bindings = <&kp K>;
+        };
+
+        combo_20 {
+            timeout-ms = <50>;
+            key-positions = <1 20>;
+            bindings = <&kp H>;
+        };
+
+        combo_21 {
+            timeout-ms = <50>;
+            key-positions = <1 21>;
+            bindings = <&kp U>;
+        };
+
+        combo_22 {
+            timeout-ms = <50>;
+            key-positions = <1 22>;
+            bindings = <&kp Y>;
+        };
+
+        combo_23 {
+            timeout-ms = <50>;
+            key-positions = <1 23>;
+            bindings = <&kp SEMI>;
+        };
+
         combo_shifttab {
             timeout-ms = <50>;
             key-positions = <16 21>;
