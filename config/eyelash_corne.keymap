@@ -1,5 +1,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define AS(keycode) &as LS(keycode) keycode
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -10,7 +11,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define AS(keycode) &as LS(keycode) keycode 
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -92,9 +92,9 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F  &kp P        &kp B                            &none          &kp J        &kp L        &kp U       &kp Y         AS SEMI      &none
+&none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F  &kp P        &kp B                            &none          &kp J        &kp L        &kp U       &kp Y         AS(SEMI)     &none
 &none  &ht LCTRL A  &ht LSHIFT R  &ht LGUI S   &ht LALT T   &kp G                     &none  &none &none    &kp M        &ht LALT N   &ht RGUI E  &ht LSHIFT I  &ht RCTRL O  &none
-&none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C  &ht LC(S) D  &ht LC(V) V   &kp C_MUTE         &none          &kp K        &ht LC(H) H  AS COMMA    AS DOT        AS FSLH      &none
+&none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C  &ht LC(S) D  &ht LC(V) V   &kp C_MUTE         &none          &kp K        &ht LC(H) H  AS(COMMA)   AS(DOT)       AS(FSLH)     &none
                                   &none        &lay_sym     &lay_num                                        &lay_nav     &kp DEL      &none
             >;
 
