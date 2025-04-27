@@ -30,19 +30,24 @@
 / {
     combos {
         compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <17 20>;
+            bindings = <&kp TAB>;
+        };
+        combo_shifttab {
+            timeout-ms = <50>;
+            key-positions = <16 21>;
+            bindings = <&kp LS(TAB)>;
+        };
         combo_capslock {
             timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp CAPSLOCK>;
-        };
-        combo_capslock_two {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
+            key-positions = <15 22>;
             bindings = <&kp CAPSLOCK>;
         };
         combo_capsword {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <14 23>;
             bindings = <&caps_word>;
         };
     };
