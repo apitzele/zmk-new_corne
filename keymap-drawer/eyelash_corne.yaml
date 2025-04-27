@@ -12,7 +12,7 @@ layers:
   - L
   - U
   - Y
-  - {t: ;, s: ':'}
+  - '&as LS(SEMI) SEMI'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
@@ -39,9 +39,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - K
   - {t: H, h: Ctl+H}
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - '&as LS(COMMA) COMMA'
+  - '&as LS(DOT) DOT'
+  - '&as LS(FSLH) FSLH'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&lay_sym'
@@ -128,12 +128,12 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - OUT USB
   - OUT BLE
+  - OUT USB
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&studio_unlock'
+  - BT CLR ALL
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F5
   - F10
@@ -141,7 +141,7 @@ layers:
   - F12
   - Ctl+F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - BT CLR ALL
+  - '&studio_unlock'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
