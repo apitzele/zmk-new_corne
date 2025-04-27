@@ -12,7 +12,7 @@ layers:
   - L
   - U
   - Y
-  - '&as LS(SEMI) SEMI'
+  - {t: ;, h: Sft+;, s: ':'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
@@ -39,9 +39,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - K
   - {t: H, h: Ctl+H}
-  - '&as LS(COMMA) COMMA'
-  - '&as LS(DOT) DOT'
-  - '&as LS(FSLH) FSLH'
+  - {t: ',', h: 'Sft+,', s: <}
+  - {t: ., h: Sft+., s: '>'}
+  - {t: /, h: Sft+/, s: '?'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&lay_sym'
