@@ -10,6 +10,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#define AS(keycode) &as LS(keycode) keycode 
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
@@ -26,16 +28,6 @@
 };
 
 / {
-    autoshift_keys {
-        compatible = "zmk,autoshift-keys";
-        key-positions = <
-            0x36 // Comma (,)
-            0x37 // Period (.)
-            0x39 // Semicolon (;)
-            0x2F // Forward Slash (/)
-        >;
-    };
-
     macros {
         lay_num: lay_num {
             compatible = "zmk,behavior-macro";
@@ -100,9 +92,9 @@
         default_layer {
             display-name = "COLEMAK";
             bindings = <
-&none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F  &kp P        &kp B                            &none          &kp J        &kp L        &kp U       &kp Y         &kp SEMI     &none
-&none  &ht LCTRL A  &ht LSHIFT R  &ht LGUI S   &ht LALT T   &kp G                     &none  &none &none    &kp M        &ht LALT N   &ht RGUI E  &ht RSHIFT I  &ht RCTRL O  &none
-&none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C  &ht LC(S) D  &ht LC(V) V   &kp C_MUTE         &none          &kp K        &ht LC(H) H  &kp COMMA   &kp DOT       &kp FSLH     &none
+&none  &ht ESC Q    &ht LC(A) W   &ht LC(F) F  &kp P        &kp B                            &none          &kp J        &kp L        &kp U       &kp Y         AS SEMI      &none
+&none  &ht LCTRL A  &ht LSHIFT R  &ht LGUI S   &ht LALT T   &kp G                     &none  &none &none    &kp M        &ht LALT N   &ht RGUI E  &ht LSHIFT I  &ht RCTRL O  &none
+&none  &ht TAB Z    &ht LC(X) X   &ht LC(C) C  &ht LC(S) D  &ht LC(V) V   &kp C_MUTE         &none          &kp K        &ht LC(H) H  AS COMMA    AS DOT        AS FSLH      &none
                                   &none        &lay_sym     &lay_num                                        &lay_nav     &kp DEL      &none
             >;
 
@@ -124,8 +116,8 @@
             bindings = < 
 &bt BT_SEL 0  &none         &none          &none            &none    &none                           &none        &none   &kp HOME  &kp PG_UP  &kp PG_DN  &kp END      &none
 &bt BT_SEL 1  &kp LCTRL     &kp LSHIFT     &none            &none    &none                    &none  &none &none  &kp F8  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT    &none
-&bt BT_SEL 2  &out OUT_USB  &out OUT_BLE   &none            &none    &none   &studio_unlock          &none        &kp F5  &kp F10   &kp F11    &kp F12    &kp LC(F12)  &none
-                                           &bt BT_CLR_ALL   &none    &none                                        &none   &none     &none
+&bt BT_SEL 2  &out OUT_BLE  &out OUT_USB   &none            &none    &none   &bt BT_CLR_ALL          &none        &kp F5  &kp F10   &kp F11    &kp F12    &kp LC(F12)  &none
+                                           &studio_unlock   &none    &none                                        &none   &none     &none
             >;
         };
 
