@@ -141,7 +141,7 @@ layers:
   - F12
   - Ctl+F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&studio_unlock'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
