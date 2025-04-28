@@ -19,11 +19,11 @@ layers:
   - {t: R, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: LGUI}
   - {t: T, h: '$$mdi:apple-keyboard-option$$'}
-  - G
+  - {t: G, h: 'Ctl+Alt+$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - M
+  - {t: M, h: 'Ctl+Alt+$$mdi:apple-keyboard-shift$$'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: RGUI}
   - {t: I, h: '$$mdi:apple-keyboard-shift$$'}
