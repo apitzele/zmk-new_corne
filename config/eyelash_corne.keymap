@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -155,7 +156,7 @@
 &none  &ht ESC Q     &ht LC(A) W    &ht LC(F) F  &kp P        &kp B                             &none          &kp J        &kp L        &kp U       &kp Y         AS(SEMI)     &none
 &none  &hml LCTRL A  &hml LSHIFT R  &hml LGUI S  &hml LALT T  &kp G                      &none  &none &none    &kp M        &hmr LALT N  &hmr RGUI E &hmr LSHIFT I &hmr RCTRL O &none
 &none  &ht TAB Z     &ht LC(X) X    &ht LC(C) C  &ht LC(S) D  &ht LC(V) V   &kp C_MUTE          &none          &kp K        &ht LC(H) H  AS(COMMA)   AS(DOT)       AS(FSLH)     &none
-                                  &none        &lay_sym     &lay_num                                           &lay_nav     &kp DEL      &none
+                                    &none        &lay_sym     &lay_num                                        &lay_nav     &kp DEL      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
