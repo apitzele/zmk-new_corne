@@ -154,7 +154,7 @@
             display-name = "COLEMAK";
             bindings = <
 &none  &ht ESC Q     &ht LC(A) W    &ht LC(F) F  &kp P        &kp B                                         &none          &kp J                   &kp L        &kp U       &kp Y         AS(SEMI)     &none
-&none  &hml LCTRL A  &hml LSHIFT R  &hml LGUI S  &hml LALT T  &hml LC(LA(LSHIFT)) G                  &none  &none &none    &hml LC(LA(LSHIFT)) M   &hmr LALT N  &hmr RGUI E &hmr LSHIFT I &hmr RCTRL O &none
+&none  &hml LCTRL A  &hml LSHIFT R  &hml LGUI S  &hml LALT T  &hml LC(LA(LSHIFT)) G                  &none  &none &none    &hmr LC(LA(LSHIFT)) M   &hmr LALT N  &hmr RGUI E &hmr LSHIFT I &hmr RCTRL O &none
 &none  &ht TAB Z     &ht LC(X) X    &ht LC(C) C  &ht LC(S) D  &ht LC(V) V              &kp C_MUTE           &none          &kp K                   &ht LC(H) H  AS(COMMA)   AS(DOT)       AS(FSLH)     &none
                                     &none        &lay_sym     &lay_num                                                     &lay_nav                &kp DEL      &none
             >;
