@@ -205,3 +205,5 @@ combos:
   k: $$mdi:apple-keyboard-caps$$
 - p: [14, 26]
   k: $$mdi:alpha-w-box$$
+- p: [42, 47]
+  k: EP TOG
