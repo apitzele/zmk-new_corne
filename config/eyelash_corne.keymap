@@ -15,6 +15,10 @@
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
+&soft_off {
+    hold-time-ms = <2000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 &msc {
     acceleration-exponent = <1>;
     time-to-max-speed-ms = <100>;
@@ -195,10 +199,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&none  &kp EXCL         &kp AT           &kp HASH         &kp DLLR    &kp PRCNT                 &none        &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &none
-&none  &kp EQUAL        &kp PLUS         &kp MINUS        &kp UNDER   &none              &none  &none &none  &kp PIPE   &kp LBRC  &kp RBRC   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none
-&none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none       &none      &none          &none        &kp TILDE  &kp LBKT  &kp RBKT   &kp GRAVE         &kp BSLH           &none
-                                         &none            &none       &none                                  &none      &none     &none
+&none  &kp EXCL         &kp AT           &kp HASH         &kp DLLR    &kp PRCNT                    &none        &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &none
+&none  &kp EQUAL        &kp PLUS         &kp MINUS        &kp UNDER   &none                 &none  &none &none  &kp PIPE   &kp LBRC  &kp RBRC   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &none
+&none  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none       &none      &soft_off         &none        &kp TILDE  &kp LBKT  &kp RBKT   &kp GRAVE         &kp BSLH           &none
+                                         &none            &none       &none                                     &none      &none     &none
             >;
         };
     };
