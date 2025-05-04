@@ -182,7 +182,7 @@ layers:
   - RGB EFR
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '~'
   - {t: '[', s: '{'}
